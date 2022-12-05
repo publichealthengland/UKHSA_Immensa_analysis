@@ -38,9 +38,9 @@ selected_areas_and_labels <- initialise_selected_areas_and_labels(
 
 # load in the datasets, process some of the data, load map data, load growth rate data
 initialised_data <- initialise_raw_data_sets(
-  raw_data_file = "2022-08-23_cases_admissions_deaths_dataset_publication.csv", 
-  lfd_file = "2022-08-23_lfd_dataset_publication_211223.csv", 
-  pcr_file = "2022-08-23_pcr_dataset_publication_211223.csv", 
+  raw_data_file = "cases_admissions_deaths_dataset_publication.csv", 
+  lfd_file = "lfd_dataset_publication.csv", 
+  pcr_file = "pcr_dataset_publication.csv", 
   surrounding_areas = init_vars$surrounding_areas
 )
 
