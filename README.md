@@ -1,4 +1,4 @@
-<img src="images/UKHSA-logo.png" alt="drawing" width="150"/>
+<img src="images/ukhsa-logo.png" alt="drawing" width="150"/>
 
 # Epidemiological impact of a large number of false-negative SARS-CoV-2 test results in South West England during September and October 2021
 
