@@ -38,7 +38,7 @@ process_data <- function(impact_measure, data, prop_tests_in_area,
     # if rest of england is false get the cf row from the dataframe
     if (rest_of_england == FALSE) {
     #   
-    # # # can be deleted as they are the same
+    # 
        if (surrounding_areas == FALSE) {
         counterfactual <- counterfactual[1:knn_neighbours]
        }
