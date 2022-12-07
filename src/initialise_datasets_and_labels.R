@@ -207,7 +207,7 @@ load_shape_data <- function() {
   print("Loading Shape Data")
   # Source: Office for National Statistics licensed under the Open Government Licence v.3.0
   # Contains OS data © Crown copyright and database right 2021
-  df_shape <- st_read("./data/Counties_and_Unitary_Authorities.geojson")
+  df_shape <- st_read("./data/Counties_and_Unitary_Authorities_eng.geojson")
   
   # rename columns
   names(df_shape) <- c("utla_20_cd", "utla_20_nm", "geometry")
