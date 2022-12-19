@@ -92,7 +92,7 @@ tables <- finalise_tables_production(
 render(
   params = list(
     figure_1 = "../visuals/geospatial_maps/joined_plot.png",
-    figure_2 = visuals$line_plots$daily_LFD_positivity, #"../visuals/line_plots/LFD_positivity",#
+    figure_2 = visuals$line_plots$daily_LFD_positivity, 
     figure_3 = visuals$lfd_positivity$final_initial_data_plot,
     figure_4 = visuals$admissions_per_100k$final_initial_data_plot,
     figure_5 = visuals$deaths_per_100k$final_initial_data_plot,
