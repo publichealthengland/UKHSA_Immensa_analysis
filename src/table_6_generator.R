@@ -48,7 +48,7 @@ table_6_generator <- function(impact_measure_with_end_date,
     individual_series, apply_log, log_const, utla_col_name, coeff_lfdpos_caserates
   )
   
-  headers[["KNN (5 neighbours)"]] <- "KNN ( 5 neighbours"
+  headers[["KNN (5 neighbours)"]] <- "KNN ( 5 neighbours)"
   
   # load labels with the surrounding area df for the surrounding column in the last table
   # this is used for table 6 where the surrounding area column has been created
