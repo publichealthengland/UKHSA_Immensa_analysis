@@ -47,7 +47,7 @@ The Serious Untoward Incident Investigation report can be found by accessing the
 
 Replication
 ----------
-This repository contains the code & data for the preprint publication (INSERT LINK HERE). The code is written in R, and data stored in csv format and a shape file will be called from the ONS api and stored as a geojson after the first run.
+This repository contains the code & data for the [preprint publication](https://www.medrxiv.org/content/10.1101/2022.11.30.22282922v1). The code is written in R, and data stored in csv format and a shape file will be called from the ONS api and stored as a geojson after the first run.
 
 - All plots and tables from the paper can be reproduced using the functions in the `src` folder.
 
@@ -63,6 +63,6 @@ Extensions
 ----------
 Data and code from this project have been published in the spririt of collaboration. Please feel free to replicate this work, or to adapt & develop the work further. When using the data and code from this repository please cite using the following.
 
-> Hounsome, L., et al. (2022). Epidemiological impact of a large number of incorrect negative SARS-CoV-2 test results in South West England during September and October 2021. https://doi.org/10.1101/2022.11.30.22282922 
+> L. Hounsome, D. Herr, R. Bryant, R. Smith, L. Loman, J. Harris, U. Youhan, E. Dzene, P. Hadjipantelis, H. Long, T. Laurence,  S. Riley,  F. Cumming (2022). Epidemiological impact of a large number of incorrect negative SARS-CoV-2 test results in South West England during September and October 2021. https://doi.org/10.1101/2022.11.30.22282922 
 
 To get in contact to discuss this work, please email: luke.hounsome@ukhsa.gov.uk or raise an issue on the repository.
