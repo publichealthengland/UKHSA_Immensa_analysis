@@ -5,17 +5,8 @@
 # extrafont::loadfonts(device = 'win')
 
 #### This loads all packages required across scripts (rather than inserting library in each file)
-if (!require(pacman)) {
-  install.packages("pacman")
-  require(pacman)
-}
-# downloads and loads libraries
-p_load(
-  CausalImpact, readr, stringr, dplyr, glue, zoo, ggplot2, tidyr, tidyverse,
-  effectsize, png, gridExtra, ggpubr, ggtext, grid, purrr, reshape2,
-   curl, paletteer, readxl, scales, extrafont, ggrepel,
-  sf, rgeos, maptools, rmarkdown, flextable, officer
-)
+require(renv)
+renv::restore()
 
 #### This function sources every file in the src folder
 source_files <- function(files_to_source) {
