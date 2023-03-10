@@ -117,7 +117,7 @@ g1_function <- function(data_comb_df, reporting_lag_start, reporting_lag_end, pr
     theme(axis.line.x.bottom = element_line(color = "grey 37")) +
     # Colouring % of prop_tests_in_area in green
     ggtitle(paste0(
-      "Top nine affected UTLAs combined <br>(",
+      "A: Top nine affected UTLAs combined <br>(",
       "<span style='color:#009E73;'>", prop_tests_in_area[[1]], "%</span>",
       " of tests in UTLAs associated with the Laboratory,<br/> accounting for ",
       prop_tests_lab_x[[1]], " per cent of all the Laboratory tests)"
@@ -151,7 +151,7 @@ g1_function <- function(data_comb_df, reporting_lag_start, reporting_lag_end, pr
 
 plot_list_0_function <- function(data_comb_df, reporting_lag_start, reporting_lag_end, labels,
                                  affected_areas_colour, counterfactual_areas_colours, y_lab) {
-  labels["label"] <- paste0(
+  labels["label"] <- paste0(labels[['Subfigure']],": ",
     labels[["Affected_area"]],
     " (",
     "<span style='color:#009E73;'>", as.character(labels[["prop_tests_in_area"]]),

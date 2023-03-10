@@ -24,7 +24,7 @@ plot_affected_to_counterfactual_map <- function(rest_of_england_map_df, affected
                                                 save_map) {
   labels <- rbind(affected_df, counterfactual_df)
   plt <- ggplot() +
-    ggtitle("Figure B") +
+    ggtitle("B") +
     geom_sf(data = rest_of_england_map_df, fill = alpha("grey", 0.7)) +
     geom_sf(data = affected_df, fill = alpha("red", 0.5)) +
     geom_sf(data = counterfactual_df, fill = alpha("blue", 0.5)) +
@@ -72,7 +72,7 @@ plot_affected_to_counterfactual_map <- function(rest_of_england_map_df, affected
 plot_bubble_map <- function(df, save_bubble_map, bubble_map_height,
                             bubble_map_width) {
   plt <- ggplot() +
-    ggtitle("Figure A") +
+    ggtitle("A") +
     geom_sf(data = df, fill = alpha("white")) +
     geom_sf(
       data = df$centroid, pch = 21,

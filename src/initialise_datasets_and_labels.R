@@ -131,6 +131,7 @@ initialise_selected_areas_and_labels <- function(prop_tests_in_area,
     as.character(labels$prop_tests_lab_x), "%)"
   )
 
+  labels["Subfigure"] <- LETTERS[seq( from = 1, to = 10 )]
   return(list("selected_areas" = selected_areas, "labels" = labels))
 }
 

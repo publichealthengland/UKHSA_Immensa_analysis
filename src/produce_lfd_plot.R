@@ -149,7 +149,7 @@ plot_daily_LFD_positivity <- function(df = df_lfd_plot,
     scale_y_continuous(name = "Proportion of daily LFD tests that are positive (per cent)", #labels = scales::percent, 
                        limits = plot_y_limits
                        ) +
-    scale_x_date(name = "", limits = c(min(df_plot_lines$date) + 3, max(df_plot_lines$date) - 3)) +
+    scale_x_date(name = "Month in 2021", limits = c(min(df_plot_lines$date) + 3, max(df_plot_lines$date) - 3)) +
     scale_colour_manual(
       aesthetics = c("fill", "colour"),
       labels = prop_labels,
@@ -157,7 +157,7 @@ plot_daily_LFD_positivity <- function(df = df_lfd_plot,
     ) +
     labs(
       col = "per cent of tests at \n Laboratory X",
-      caption = paste("Shaded area shows interquartile range for LTLAs in the group",paste("\nRegions included:", paste(plot_regions, collapse = " & ")))
+    
     ) +
     guides(alpha = "none", fill = "none") +
     theme(legend.title = element_text(size = 22),legend.text = element_text(size = 17),

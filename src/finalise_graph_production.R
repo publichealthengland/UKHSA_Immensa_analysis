@@ -153,10 +153,10 @@ finalise_graph_production <- function(impact_measure_with_end_date, prop_tests_l
       "final_initial_data_plot" = final_initial_data_plot,
       "final_ci_plot" = final_ci_plot
     )
-  
+    
     outputs[[impact_measure]] <- results
   }
-
+  
   outputs[["line_plots"]] <- produce_lfd_plot(
     df_lfd, df_pcr, init_data,
     reporting_lag_start, reporting_lag_end,

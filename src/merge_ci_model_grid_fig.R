@@ -161,7 +161,7 @@ causal_modelling_plot_function <- function(data_new, ci_new, prop_tests_in_area,
     theme(axis.line.x.bottom = element_line(color = "grey 37")) +
     ylab(paste0(y_lab, "\n")) +
     labs(title = paste0(
-      "Top nine affected UTLAs combined <br/> (",
+      "A: Top nine affected UTLAs combined <br/> (",
       "<span style='color:#009E73;'>", prop_tests_in_area[[1]], "%</span>",
       " of tests in UTLAs associated with the Laboratory,<br/> accounting for ",
       prop_tests_lab_x[[1]], " per cent of all Laboratory X tests)"
@@ -301,7 +301,7 @@ causal_model_plot_list <- function(labels, selected_areas, rest_of_england, surr
       ci_loop_2 <- as.data.frame(lapply(ci_loop_2, exp_fun, log_const))
     }
     
-    labels["label"] <- paste0(
+    labels["label"] <- paste0(labels[["Subfigure"]],': ',
       labels[["Affected_area"]],
       " (",
       "<span style='color:#009E73;'>", as.character(labels[["prop_tests_in_area"]]),
