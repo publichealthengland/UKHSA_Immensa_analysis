@@ -1,0 +1,281 @@
+---
+output: 
+  word_document:
+    reference_docx: reference.docx
+
+params:
+  figure_1: NULL
+  figure_2: NULL
+  figure_3: NULL
+  figure_4: NULL
+  figure_5: NULL
+  figure_6: NULL
+  figure_7: NULL
+  figure_8: NULL
+  figure_9: NULL
+  table_1: NULL
+  table_2: NULL
+  table_3: NULL
+  table_4: NULL
+  table_5: NULL
+  table_6: NULL
+  
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning = FALSE, message = FALSE)
+
+```
+**Epidemiological impact of a large number of incorrect negative SARS-CoV-2 test results in South West England during September and October 2021**
+
+Hounsome, L.^1^, Herr, D.^1^, Bryant, R.^1^, Smith, R.^1^, Loman, L.^1^, Harris, J.^1^, Youhan, U.^1^, Dzene, E.^1^, Hadjipantelis, P.^1^, Long, H.^1^, Laurence, T.^1^, Riley, S.^2^, Cumming, F.^1^ 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^1^ Advanced Analytics Team. Data, Analytics and Surveillance. UKHSA 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^2^ Director General. Data, Analytics and Surveillance. UKHSA 
+
+UK Health Security Agency (UKHSA), November 2022
+
+**Abstract**
+
+**Background** In England, free testing for COVID-19 was widely available from early in the pandemic until 1 April 2022. Based on apparent differences in the rate of positive PCR tests at a single laboratory compared to the rest of the laboratory network, we hypothesised that a substantial number of UK PCR tests processed during September and October 2021 may have been incorrectly reported as negative, compared with the rest of the laboratory network. We investigate the epidemiological impact of this incident.
+
+**Methods** We estimate the additional number of COVID-19 cases that would have been reported had the sensitivity of the laboratory test procedure not dropped for the period 2 September to 12 October. In addition, by making comparisons between the most affected local areas and comparator populations, we estimate the number of additional infections, cases, hospitalisations and deaths that could have occurred as a result of increased transmission due to the misclassification of tests.
+
+**Results** We estimate that around 39,000 tests may have been incorrectly classified during this period and, as a direct result of this incident, the most affected areas in the South West could have experienced between 6,000 and 34,000 additional reportable cases, with a central estimate of around 24,000 additional reportable cases. Using modelled relationships between key variables, we estimate that this central estimate could have translated to approximately 55,000 additional infections, which means that each incorrect negative test likely led to just under 1.5 additional infections. In those same geographical areas, our results also suggest an increased number of admissions and deaths.
+
+**Conclusion** The incident is likely to have had a measurable impact on cases and infections in the affected areas in the South West of England.
+
+---
+**Keywords:** 
+
+COVID-19, Test & Trace, Epidemiology, Public Health
+
+\newpage
+
+# Introduction
+
+In England, free testing for COVID-19 was widely available from early in the pandemic until 1 April 2022. PCR-based testing was available for anyone with COVID-19 symptoms from 18 May 2020 (UK Government 2020), with rapid testing using Lateral Flow Devices (LFDs) universally available from 12 April 2021. Until 11 January 2022, it was a requirement to seek a confirmatory PCR test after a positive LFD result. LFD testing was provided through multiple channels: in-person testing at walk-in centres; drive-through sites; in schools; and home test kits. PCR assays were processed at a network of laboratories, with some only used when demand for testing was very high (so-called ‘surge laboratories’). Such widescale testing formed the basis of exerting control on COVID-19 transmission in the UK through notification to individuals of a positive test and initiation of contact tracing. In addition, individual social circumstances and behavioural responses to contact tracing and self-isolation were important considerations for driving transmission down, even where robust testing processes were available.
+
+On 12 October 2021, it was confirmed to UKHSA that there was an issue at a surge laboratory that was active during the period 2 September to 12 October (hereafter referred to as ‘the laboratory’). The laboratory management team within UKHSA reported that the proportion of tests found to be positive (positivity) at this site was lower than would be expected given the mix of test origins (e.g., home and in-person testing). This suggested that a higher proportion of samples were being reported as incorrectly negative relative to other laboratories (UKHSA, 2022). In this paper we define a false negative as a true positive result that is reported as negative due to imperfect test sensitivity in standard operating conditions. We define incorrect negatives as the excess false negatives that are due to standard operating conditions not being met (e.g., because of an incorrect CT threshold being used). 
+
+Importantly, the number of tests directed towards the laboratory was determined by national prevalence and the logistical supply chains in place, rather than epidemiological conditions in any one local area^[To balance capacity across the system, tests are often redistributed across the lab system. Home testing kits never make up more than 20% of lab capacity and walk-in tests never make up more than around 40%.].  The variation in the number of tests from administrative areas across the country processed by the laboratory provides a natural experiment. As this variation is unrelated to the trajectory of the pandemic in the areas, this allows us to analyse the effect of the incident on onward viral transmission in isolation from other pandemic factors. A recent analysis of this incident using similar techniques to this work, but using PCR data alone, estimates that every incorrect negative COVID-19 case is likely to have caused between 0.6 to 1.6 additional infections (Fetzer 2021). In this study we use multiple techniques applied to LFD and other data at a variety of geographic levels to estimate the overall impact of the incident on onward infections, hospitalisations and deaths.
+
+# Methods
+
+It is neither possible to discern the true results of individual tests nor to follow chains of transmission or determine individual outcomes. We therefore take an ecological approach to analyse trends in geographic subregions that were most affected. This allows us to estimate the total number of infections (defined as all incidences of COVID-19, whether identified and reported or not), cases (defined as infections with an associated positive test that have been reported via official channels), admissions to hospital, and deaths that resulted from the laboratory incident, but not identify the individuals involved. 
+
+PCR and LFD test data, and data on deaths, are sourced from the UKHSA COVID-19 dashboard and the National Pathology Exchange (NPEx) database available to UKHSA. We aggregate data to either the Upper Tier Local Authority (UTLA) level or Lower Tier Local Authority (LTLA) level based on postcode of residence. Hospital admissions at the UTLA level are estimated by assigning Lower Layer Super Output Areas (LSOAs) to trusts based on geographical proximity, then apportioning trust admissions (from the UKHSA COVID-19 dashboard) based on LSOA population size. 
+
+PCR test data are affected by the incident and therefore unreliable during the incident period; this was further compounded by some people being invited to re-test. Analysis of LFD data has the advantage of being less affected by the incident. Comparison of LFD positivity trends with estimated community prevalence from the ONS COVID-19 Infection Survey (CIS) (ONS 2022) shows a correlation between the two measures during the time period and supports the use of LFD positivity as a reasonable proxy of true changes in prevalence caused by the incident. 
+
+We first estimate the number of incorrect negative test results reported by the laboratory. Positivity for tests conducted in the rest of the laboratory network is calculated, stratified by various adjustment factors. These are then applied to the number of tests processed at the laboratory to estimate the difference between expected and reported negative tests. We assessed the difference in the positivity between the laboratory and expected positivity based on other laboratories using a proportion test and use bootstrapping techniques to estimate overall uncertainty.
+
+Our main analysis aggregates UTLAs into those that were affected by the incident and those that were largely unaffected. We define affected UTLAs as those that had >20% of their tests processed at the laboratory over the period of interest, and unaffected UTLAs <5%. We match affected areas to unaffected areas using a k-nearest neighbours (KNN) analysis (Table 1). The matching covariates for the KNN analysis include: total population; mean age; proportion of population aged 0-15 years; proportion of population aged 16-75 years; proportion of population aged >75 years; Index of Multiple Deprivation (IMD) Average Score; IMD proportion of LSOA in the lower 10th percentile; IMD average health score; IMD health pro-portion of LSOA in the lower 10th percentile; IMD average employment score; IMD employment proportion of LSOA in the lower 10th percentile; geographic closeness (longitude, latitude); area size; and, population density. Each variable was normalised to N(0, 1) prior to performing the analysis.  We then compare seven-day rolling average LFD positivity between affected and matched areas and use this to estimate additional cases.
+
+We conduct secondary statistical analysis to quantify the uncertainty and significance of our results. The unaffected UTLAs (matched using the KNN approach) are used to provide a counterfactual epidemic trend to estimate the data for each affected UTLA had the incident not occurred. To do this, we undertake causal impact analysis using a Bayesian structural time series model based on the CausalImpact package in R (Brodersen, 2015). The approach uses a Bayesian structural time-series model to combine the set of control series in the ‘pre-treatment’ period (i.e., before the incident took place) into a single synthetic control.
+
+
+# Results
+
+Between 2 September and 12 October 2021, the laboratory returned a substantially lower level of test positivity than did the rest of the network. Overall, 8,805 of 360,138 (2.44%; 95% confidence interval on mean of 2.39%, to 2.50%) samples from the laboratory were positive compared with 1,041,523 of 9,250,582 (11.26%; 11.24%, 11.28%) for the rest of the network (Table 2). Samples processed at the laboratory were disproportionately from the South West region and from younger people. Differences in rates of positivity between the laboratory and the rest of the network were evident for subgroups defined by the reason for the test.
+
+We estimate that there were around 39,000 additional incorrect negatives from the laboratory than would have been expected had the samples been processed elsewhere during this period. This is our preferred estimate, which accounts for differences in age, test site, region and date. Different analytical specifications produce slightly different estimates (Table 3).  The simple application of average PCR test positivity from other testing laboratories to the number of tests processed at the laboratory, without adjustment for any other factors, yields a result of around 33,000 additional incorrect negatives in England following the incident. 
+
+Figure 1a shows the varying proportion of tests sent to the laboratory by UTLA. We define these as the affected areas for our primary analysis (Table 4). Figure 1b shows the affected areas and their associated comparator areas. 
+
+Reported positivity from LFDs suggests that the laboratory incident temporarily increased transmission. Based on tests reported during the latter part of 2021, LFD positivity increased in those areas from which a high proportion of tests were sent to the laboratory, to a peak on 10 October 2021 before decreasing to levels similar to those observed in less affected areas (Figure 2). By the end of November, LFD positivity rates had converged, shown by the overlap of the IQRs.
+
+The impact of the laboratory incident on transmission can be seen when individual highly affected areas are compared with a group of five comparator areas (selected using the KNN approach). In all affected areas the observed LFD positivity increased above comparator areas from mid-September, peaking around the time the laboratory stopped processing tests, then falling to converge with comparator areas in early November (Figure 3). Additionally, there was no later period where LFD positivity in the affected areas was lower than the comparators, which might be expected if the positivity increase was due to increased testing, indicating a genuine increase in COVID-19 prevalence. 
+
+We estimate that the incident led to about 24,100 additional cases across the most affected areas between the 2 September 2021 and the 31 October 2021 (Table 5).2 Utilising a case ascertainment rate informed by ONS modelled incidence estimates (ONS 2022) and UKHSA case data (UK Government 2021), we estimate that this incident led to an additional 55,000 infections. That suggests each wrongly reported test result led to just under 1.5 additional infections on average. Given the known distribution of secondary COVID-19 cases, there will have been many primary cases without onward infections, and a substantial tail with multiple onward infections (Endo, 2020).  
+
+For the same time period, we find evidence of additional hospital admissions. We estimate there were about 680 additional hospitalisations in the affected areas that may not otherwise have occurred, based on a comparison of the observed data in affected and comparator areas (Figure 4 and Table 5). Similarly, we estimate that there may have been just over 20 additional deaths in these most affected areas (Figure 5). 
+
+As well as our main results based on comparison of observed data in affected and comparator areas, we use a causal impact approach to describe the uncertainty associated with these estimates (Figures 6-8). This approach using matched comparators produces a 95th percent credible interval of 5,700 to 34,100 additional cases, -574 to 1,830 additional hospital admissions, and -25 to 154 additional deaths^[Relatively small numbers of deaths leads to weaker fitting of the model to pre-incident data trends, compared to cases and hospitalisation, and hence the central estimate from the causal impact approach is notably different.].  More generally, our results are robust to a range of counterfactuals, including using contiguous UTLAs surrounding the most affected areas (Table 6).
+
+\newpage
+
+# Discussion
+
+We have estimated the additional number of cases that would have been reported had the de facto sensitivity of results from the laboratory not dropped for the period 2 September to 12 October. In addition, by making comparisons between the most affected local areas and comparator populations, we have estimated the number of additional infections, cases, hospitalisations and deaths that occurred as a result of the increased transmission due to the misclassification of tests. There is a visible increase in LFD positivity in the areas most affected by the incident, with an estimated range that does not overlap zero. The ranges we estimate for additional hospitalisations and deaths do include zero. However, on balance, it does not seem plausible that the large number of additional cases (and therefore infections) did not lead to additional hospital admissions. The pattern of hospital admission rates across the most affected areas is consistent with increasing LFD positivity. Around the time of the incident the IHR for COVID-19 increased from 0.75% to 3% (Birrell, 2022). Simplifying to an average of 1% (2%) means our estimate of 55,000 infections could lead to 550 (1,100) hospitalisations, consistent with the range predicted above. 
+
+It is natural to ask if these findings can be extrapolated to an England-wide figure. We undertook a regression analysis of LFD growth rate before and after the incident to investigate the dose-response at an LTLA level, an approach consistent with an assessment of the impact of the incident in Wales (Welsh Government, 2022).  We find that the relationship between the proportion of tests processed at the laboratory and the LFD positivity growth might be non-linear (Figure 9). Therefore, we argue that a simple scaling of our results might not be meaningful for England as a whole.
+
+Our findings are broadly comparable to the only other published study exploring the effects of this incident (Fetzer, 2021b), which estimated that each incorrect negative resulted in 0.6 to 1.6 additional infections in subsequent weeks, compared to our estimate of each incorrect negative resulting in just under 1.5 additional infections. However, Fetzer may have underestimated the effect because they were not able to estimate the excess number of incorrect negative results for each local area separately. Also, our study utilises data from LFD tests, which are less likely to be biased by the incident than PCR tests. 
+
+Our analysis has some limitations that may affect our estimates of the effects of the incident. First, it is probable that undetected infections as a result of the incident increased infections in adjacent areas, some of which are used in the comparator groups. This may have increased the positivity in the comparator baseline, meaning that the overall effect of the incident is greater than that suggested by the KNN approach, which includes some geographically adjacent areas. This is particularly the case over longer time periods as chains of transmission get geographically more diffuse. Second, COVID-19 hospitalisations and deaths statistics during the period of the incident were based in part upon a positive PCR test in the 14 days prior to admission (or 28 days prior to death), therefore during the period of the incident there may also have been a reduction in hospitalisations and deaths recorded as being COVID-related. This may have led to an underestimate of effect on hospitalisations and deaths using the KNN approach, suggesting that inferring admissions from our infections estimate with an appropriate IHR may lead to more reliable results. Finally, we cannot rule out a population behavioural response to reports about the incident in nearby areas that formed part of our control group. If this was the case, the incident may have indirectly reduced transmission in some of the control areas, leading to an overestimate of the true impact of the incident in the most affected areas. 
+
+Although these results could be interpreted as evidence for the effectiveness of testing in reducing transmission, we do not believe that this can be deduced from this study.  First, the effects of the laboratory reporting issue are not equivalent to the effect of removing Test, Trace and Isolate, because receiving an incorrect negative is different from not testing. Those with symptoms who cannot test, as was the case in the early part of the UK COVID-19 pandemic, may still follow protective behaviours; whereas during this incident, many people with COVID-19 may have continued daily activities in the belief that they were negative. Second, our regression analysis suggests that the relationship between the proportion of tests sent to the laboratory and onward transmission is non-linear, so more generalised inference should be treated with caution. 
+
+
+# References
+
+Brodersen KH, Gallusser F, Koehler J, Remy N, Scott SL. 2015. Inferring causal impact using Bayesian structural time-series models. Annals of Applied Statistics, Vol. 9, No. 1, 247-274. http://research.google.com/pubs/pub41854.html
+
+Endo A, Centre for the Mathematical Modelling of Infectious Diseases COVID-19 Working Group, Abbott S, Kucharski AJ, Funk S. 2020. Estimating the overdispersion in COVID-19 transmission using outbreak sizes outside China. Wellcome Open Research, 5:67 https://doi.org/10.12688/wellcomeopenres.15842.3
+
+Fetzer T. 2021. Measuring the epidemiological impact of a false negative: Evidence from a natural experi-ment. https://warwick.ac.uk/fac/soc/economics/research/centres/cage/publications/workingpapers/2021/measuring_the_epidemiological_impact_of_a_false_negative_evidence_from_a_natural_experiment/  Accessed 17th November, 2021.
+
+ONS 2022. Coronavirus (COVID-19) Infection Survey: England. 21 January 2022. https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/datasets/coronaviruscovid19infectionsurveydata Accessed 24th January 2022.
+
+UK Government 2020. Everyone in the United Kingdom with symptoms now eligible for coronavirus tests. 18th May 2020. https://www.gov.uk/government/news/everyone-in-the-united-kingdom-with-symptoms-now-eligible-for-coronavirus-tests. Accessed 8th November 2021.
+
+UK Government 2021. UK Summary | Coronavirus (COVID-19) in the UK. 7th November 2021. https://coronavirus.data.gov.uk/. Accessed 8th November 2021
+
+UK Health Security Agency 2022. Final report of the Serious Untoward Incident investigation into the misreporting of PCR test results by the Immensa Health Clinic Limited. 29th November 2022. https://www.gov.uk/government/publications/serious-untoward-incident-investigation-immensa-health-clinic-limited. Accessed 29th November 2022.
+
+Welsh Government 2022. Technical Advisory Group: the impact in Wales of the COVID-19 ‘false negative’ PCR tests reported during September/October 2021. https://gov.wales/technical-advisory-group-impact-wales-covid-19-false-negative-pcr-tests-reported-during Accessed 12th May 2022. 
+
+\newpage
+# Figures and Tables 
+
+<br>
+
+```{r, echo=FALSE, message=FALSE, dpi=300, fig.cap="**Figure 1**: a) proportion of total PCR tests in each UTLA which were sent to the laboratory during 2 September – 12 October; and b) nine most affected UTLAs (in red) with comparison areas (in blue) selected using a KNN approach, numbered according to match with affected area."}
+knitr::include_graphics(params$figure_1)
+ 
+```
+
+\newpage
+
+```{r, echo=FALSE, message=FALSE,warnings=FALSE,  fig.width=12, fig.height=8, dpi=300, fig.cap="**Figure 2**: Daily LFD positivity by LTLA from June to December 2021; stratified by proportion of tests sent to the laboratory during 2 September – 21 	October in the South West, West Midlands and the South East. The median and inter-quartile-range of 7 day rolling mean LFD positivity is displayed by level of exposure by lines and swathes."}
+params$figure_2
+```
+
+\newpage
+
+```{r, echo=FALSE, message=FALSE,  fig.width=14, fig.height=15, dpi=300, fig.cap="**Figure 3**: A time-series of LFD positivity in affected areas (red line) compared to comparator areas (blue dashed) based on our nearest-neighbours approach. The top panel shows the aggregated results, with the bottom nine panels showing the results for each individual UTLA (as per the right-hand panel of Figure 1). The area between the red and blue lines is an indication of the total excess LFD positivity (and hence excess infections) by the incorrect negative test reports over the period, in the most affected areas.   Figures in brackets show the proportion of tests from that UTLA processed at the affected lab, in green; and the overall proportion of all tests processed at the lab, in grey."}
+params$figure_3 
+```
+
+\newpage
+```{r, echo=FALSE, message=FALSE,   fig.width=14, fig.height=15, dpi=300, fig.cap="**Figure 4**: A time series of hospital admissions per 100,000 in affected areas (red line) compared to comparator areas (blue dashed) based on our nearest-neighbours approach. The top panel shows the aggregated results, with the bottom nine panels showing the results for each individual UTLA (as per the right-hand panel of Figure 1). The area between the red and blue lines is an indication of the total additional hospital admissions caused by the incorrect negative test reports over the period, in the most affected areas. Figures in brackets show the proportion of tests from that UTLA processed at the affected lab, in green; and the overall proportion of all tests processed at the lab, in grey."}
+params$figure_4 
+```
+
+\newpage
+```{r, echo=FALSE, message=FALSE,  fig.width=14, fig.height=15, dpi=300, fig.cap="**Figure 5**: A time series of deaths per 100,000 in affected areas (red line) compared to comparator areas (blue dashed) based on our nearest-neighbours approach. The top panel shows the aggregated results, with the bottom nine panels showing the results for each individual UTLA (as per the right-hand panel of Figure 1). The area between the red and blue lines is an indication of the total additional deaths caused by the incorrect negative test reports over the period, in the most affected areas. Figures in brackets show the proportion of tests from that UTLA processed at the affected lab, in green; and the overall proportion of all tests processed at the lab, in grey."}
+params$figure_5
+```
+
+\newpage
+```{r, echo=FALSE, message=FALSE,  fig.width=14, fig.height=15, dpi=300, fig.cap="**Figure 6**: A time-series of LFD positivity in affected areas (red line) compared to synthetic comparators (green dashed) based on our nearest-neighbours approach. The top panel shows the aggregated results, with the bottom nine panels showing the results for each individual UTLA (as per the right-hand panel of Figure 1). The area between the red and green lines is an indication of the total excess LFD positivity (and hence excess infections) by the incorrect negative test reports over the period, in the most affected areas. The shaded area indicates confidence intervals on the synthetic comparator estimates. Figures in brackets show the proportion of tests from that UTLA processed at the lab, in green; and the overall proportion of all tests processed at the lab."}
+params$figure_6
+```
+
+\newpage
+```{r, echo=FALSE, message=FALSE,  fig.width=14, fig.height=15,dpi=300, fig.cap="**Figure 7**: A time series of hospital admissions per 100,000 in affected areas (red line) compared to synthetic comparator areas (green dashed) based on our nearest-neighbours approach. The top panel shows the aggregated results, with the bottom nine panels showing the results for each individual UTLA (as per the right-hand panel of Figure 1). The area between the red and green lines is an indication of the total additional hospital admissions caused by the incorrect negative test reports over the period, in the most affected areas. The shaded area indicates confidence intervals on the synthetic comparator estimates. Figures in brackets show the proportion of tests from that UTLA processed at the lab, in green; and the overall proportion of all tests processed at the lab, in grey."}
+params$figure_7
+```
+
+\newpage
+```{r, echo=FALSE, message=FALSE,  fig.width=14, fig.height=15, dpi=300, fig.cap="**Figure 8**: A time series of deaths per 100,000 in affected areas (red line) compared to synthetic comparator areas (green dashed) based on our nearest-neighbours approach. The top panel shows the aggregated results, with the bottom nine panels showing the results for each individual UTLA (as per the right-hand panel of Figure 1). The area between the red and green lines is an indication of the total additional deaths caused by the incorrect negative test reports over the period, in the most affected areas. The shaded area indicates confidence intervals on the synthetic comparator estimates. Figures in brackets show the proportion of tests from that UTLA processed at the lab, in green; and the overall proportion of all tests processed at the lab, in grey."}
+params$figure_8
+```
+
+\newpage
+```{r, echo=FALSE, message=FALSE,  fig.width=12, fig.height=8, dpi=300, fig.cap="**Figure 9**: Ratio of daily LFD positivity growth rate 18 - 24 October to 17 - 23 August, compared to overall proportion of tests sent to the laboratory during 2 September - 12 October.  The black line shows the best fit polynomial, with grey swaths for 95% confidence intervals.  "}
+params$figure_9
+```
+
+\newpage
+
+
+```{r, echo=FALSE, message=FALSE}
+big_border <- fp_border(color="black", width = 0.5)
+ft_table_1 <- flextable::flextable(params$table_1) %>% font(part = "all", fontname = "Calibri")
+ft_table_1 <- fontsize(ft_table_1, size = 10, part = "body")
+ft_table_1 <- flextable::theme_vanilla(ft_table_1)
+ft_table_1 <- flextable::set_caption(ft_table_1, caption = "KNN analysis nearest neighbours for nine UTLAs most affected by the incident.")
+ft_table_1 <- vline(ft_table_1,i=1, part = "header")
+ft_table_1 <- border_outer(ft_table_1, border = big_border, part = "header")
+ft_table_1 <- ft_table_1 %>% autofit()
+ft_table_1 <- width(ft_table_1, width = dim(ft_table_1)$widths*8 /(flextable_dim(ft_table_1)$widths))
+ft_table_1
+```
+
+\newpage
+
+
+```{r, echo=FALSE, message=FALSE}
+
+
+ft_table_2 <- flextable::flextable(params$table_2) 
+ft_table_2 <- flextable::add_footer_lines(ft_table_2, "* Home data includes care/residential homes\nPositivity has been derived from Positive Tests / (Positive + Negative Tests") 
+ft_table_2 <- colformat_int(ft_table_2, big.mark = ",")
+ft_table_2 <- set_caption(ft_table_2, caption = "Characteristics of PCR test results from residents of England from the affected laboratory compared with those from the rest of the laboratory network from 2 September – 12 October. P-values are for difference in PCR test positivity between the laboratory and the rest of the England laboratory network.", autonum = 2
+                      )
+ft_table_2<- add_header_row(ft_table_2, top = TRUE, 
+                     values = c("","Affected Lab", "Rest Of England",""), 
+                     colwidths = c(1,3,3,1))
+ft_table_2 <- ft_table_2 %>% autofit() 
+ft_table_2 <- width(ft_table_2, width = dim(ft_table_2)$widths*8 /(flextable_dim(ft_table_2)$widths))
+ft_table_2 <- flextable::theme_vanilla(ft_table_2) %>% font(part = "all", fontname = "Calibri")
+ft_table_2 <- align(ft_table_2, align = "left", part = "footer")
+ft_table_2
+```
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+```{r, echo=FALSE, message=FALSE}
+ft_table_3 <- flextable::flextable(params$table_3)%>%font(part = "all", fontname = "Calibri")
+ft_table_3 <- flextable::theme_vanilla(ft_table_3)
+ft_table_3 <- set_caption(ft_table_3, caption = "Estimated numbers of additional incorrect negative tests reported by the laboratory for English residents from 2nd September – 12th October.", autonum = 3)
+ft_table_3 <- ft_table_3 %>% autofit() 
+ft_table_3 <- width(ft_table_3, width = dim(ft_table_3)$widths*7 /(flextable_dim(ft_table_3)$widths))
+ft_table_3
+```
+
+\newpage
+
+```{r, echo=FALSE, message=FALSE}
+ft_table_4 <- flextable::flextable(params$table_4)%>%font(part = "all", fontname = "Calibri")
+ft_table_4 <- flextable::theme_vanilla(ft_table_4)
+ft_table_4 <- set_caption(ft_table_4, caption = "UTLAs in England with the highest proportion of tests processed by the laboratory during the incident.", autonum = 4)
+ft_table_4 <- ft_table_4 %>% autofit() 
+ft_table_4 <- width(ft_table_4, width = dim(ft_table_4)$widths*7 /(flextable_dim(ft_table_4)$widths))
+ft_table_4
+```
+
+\newpage
+
+```{r, echo=FALSE, message=FALSE}
+ft_table_5 <- flextable::flextable(params$table_5)
+ft_table_5 <- flextable::add_footer_lines(ft_table_5, "(1) This is measures as the average daily difference between the affected area series and the counterfactual series constructed based on KNN. (2) Accounting for uncertainty in the estimation of the coefficient used for converting LFD positivity to case rates: Central estimate a 1 p.p. increase in LFD positivity leads to an increase in cases of 20.0 per 100k [95% conf. int 18.6 - 21.5].") 
+ft_table_5 <- set_caption(ft_table_5, caption = "Results of data comparisons between affected areas and controls for top 9 affected UTLAs", autonum = 5)
+ft_table_5 <- width(ft_table_5, width = dim(ft_table_5)$widths*8 /(flextable_dim(ft_table_5)$widths))
+ft_table_5 <- flextable::theme_vanilla(ft_table_5) %>% font(part = "all", fontname = "Calibri")
+ft_table_5 <- align(ft_table_5, align = "center", part = "all")
+ft_table_5 <- align(ft_table_5, align = "left", part = "footer")
+ft_table_5
+```
+
+\newpage
+
+```{r, echo=FALSE, message=FALSE}
+ft_table_6 <- flextable::flextable(params$table_6) 
+ft_table_6 <- set_caption(ft_table_6, caption = "Summary of Causal Impact synthetic control analysis results using different comparison areas.", autonum = 6)
+ft_table_6 <- flextable::add_footer_lines(ft_table_6, "Causal Impact synthetic control analysis comparison using different counterfactuals. The ‘Surrounding areas’ are comprised of the following UTLAs: County of Herefordshire, Dorset, Devon, Hampshire, Oxfordshire, Reading, Warwickshire, Wokingham, Worcestershire. Rest of England is all UTLA’s which are not in the top nine affected areas.")
+ft_table_6 <- width(ft_table_6, width = dim(ft_table_6)$widths*8 /(flextable_dim(ft_table_6)$widths))
+ft_table_6 <- flextable::theme_vanilla(ft_table_6) %>% font(part = "all", fontname = "Calibri")
+ft_table_6 <- align(ft_table_6, align = "center", part = "all")
+ft_table_6 <- align(ft_table_6, align = "left", part = "footer")
+ft_table_6
+```
+
